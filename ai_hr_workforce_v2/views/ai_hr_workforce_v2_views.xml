@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_ai_hr_workforce" model="ir.actions.act_window">
+        <field name="name">AI HR Workforce Management &amp; Attendance Fraud Detection</field>
+        <field name="res_model">ai.hr.attendance</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_ai_hr_workforce_tree" model="ir.ui.view">
+        <field name="name">ai.hr.attendance.tree</field>
+        <field name="model">ai.hr.attendance</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ai_hr_workforce_form" model="ir.ui.view">
+        <field name="name">ai.hr.attendance.form</field>
+        <field name="model">ai.hr.attendance</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="sequence"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ai_hr_workforce_menu_root" model="ir.ui.menu">
+        <field name="name">AI HR Workforce Management &amp; Attendance Fraud Detection</field>
+        <field name="sequence">70</field>
+    </record>
+
+    <record id="ai_hr_workforce_menu_main" model="ir.ui.menu">
+        <field name="name">Dashboard</field>
+        <field name="parent_id" ref="ai_hr_workforce_menu_root"/>
+        <field name="action" ref="action_ai_hr_workforce"/>
+        <field name="sequence">10</field>
+    </record>
+</odoo>
