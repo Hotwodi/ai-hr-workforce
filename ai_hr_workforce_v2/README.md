@@ -4,7 +4,7 @@ HR workforce management with AI attendance analysis, fraud detection, scheduling
 
 ## Price
 
-$129.0 USD / month
+$200.00 USD / month
 
 ## Features
 
